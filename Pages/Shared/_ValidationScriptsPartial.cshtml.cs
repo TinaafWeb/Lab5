@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Lab5.Views.shared
+namespace Lab5.Pages.Shared
 {
-    public class ErrorModel : PageModel
+    public class _ValidationScriptsPartialModel : PageModel
     {
         public void OnGet()
         {

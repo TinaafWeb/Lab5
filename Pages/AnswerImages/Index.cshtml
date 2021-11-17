@@ -1,0 +1,46 @@
+@page
+@model Lab5.IndexModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerImage[0].FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerImage[0].Url)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.AnswerImage) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AnswerImageId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AnswerImageId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AnswerImageId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

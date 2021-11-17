@@ -26,6 +26,7 @@ namespace Lab5.Models
 
         [Required]
         [Url]
+        [DisplayName("Image")]
         public string Url
         {
             get;
